@@ -50,7 +50,7 @@ class InteractiveRecord
 
   def self.find_by(attr)
     binding.pry
-    DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE '#{attr}' = '#{attr}'")
+    DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE #{attr} = '#{attr}'")
   end
 
 end
